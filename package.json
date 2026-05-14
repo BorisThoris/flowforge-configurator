@@ -1,5 +1,6 @@
 {
-  "name": "quick-base-task",
+  "name": "react-pipeline-configurator-demo",
+  "description": "React 16 pipeline configuration form demo with Redux, i18n, local draft persistence, custom controls, and API-facing service boundaries.",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
