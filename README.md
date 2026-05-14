@@ -1,4 +1,4 @@
-# React Pipeline Configurator Demo
+# FlowForge Configurator
 
 A legacy React 16 portfolio demo for configuring pipeline-style records through a stateful form workflow. The app demonstrates Redux + thunk data loading, form state persistence, tag editing, custom select controls, and i18n-driven labels.
 
