@@ -4,7 +4,7 @@ import { setLocale } from "react-redux-i18n";
 import { connect } from "react-redux";
 import { appOperations } from "../../duck";
 
-import QuickBaseForm from "./quickBaseForm";
+import PipelineConfigurator from "./pipelineConfigurator";
 
 const mapStateToProps = (store) => {
   const channels = store.appData.channels;
@@ -29,9 +29,9 @@ const mapDispatchToProps = (dispatch, store) => {
   };
 };
 
-const Container = connect(mapStateToProps, mapDispatchToProps)(QuickBaseForm);
-function CompaniesListContainer() {
+const Container = connect(mapStateToProps, mapDispatchToProps)(PipelineConfigurator);
+function PipelineConfiguratorContainer() {
   return <Container></Container>;
 }
 
-export default CompaniesListContainer;
+export default PipelineConfiguratorContainer;

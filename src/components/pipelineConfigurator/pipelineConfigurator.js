@@ -1,7 +1,7 @@
 import React, { Fragment, useState, useEffect } from "react";
 import PropTypes from "prop-types";
 
-import "./quickBaseFormStyle.css";
+import "./pipelineConfiguratorStyle.css";
 
 import channelService from "../../services/channelService";
 
@@ -9,7 +9,7 @@ import TagsModal from "./components/adjustTagsModal/adjustTagsModal";
 import CustomOptionsSelect from "../customOptionSelect/customOptionsSelect";
 import ButtonComp from "../genericButton/genericButton";
 
-const QuickBaseForm = ({ i18n, channels, GetInitialData, SwitchLang }) => {
+const PipelineConfigurator = ({ i18n, channels, GetInitialData, SwitchLang }) => {
   const [pageHasLoaded, setPageHasLoaded] = useState(false);
   const [isTagsModalOpn, setIsTagsModalOpn] = useState(false);
   //Form values
@@ -224,11 +224,11 @@ const QuickBaseForm = ({ i18n, channels, GetInitialData, SwitchLang }) => {
   }
 };
 
-QuickBaseForm.propTypes = {
+PipelineConfigurator.propTypes = {
   i18n: PropTypes.object.isRequired,
   channels: PropTypes.array.isRequired,
   GetInitialData: PropTypes.func.isRequired,
   SwitchLang: PropTypes.func.isRequired,
 };
 
-export default QuickBaseForm;
+export default PipelineConfigurator;

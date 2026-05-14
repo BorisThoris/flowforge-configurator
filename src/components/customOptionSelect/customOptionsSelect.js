@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import "./customOptionSelect.css";
 
-const QuickBaseForm = ({
+const CustomOptionsSelect = ({
   options,
   propertyToDisplay,
   isString,
@@ -54,7 +54,7 @@ const QuickBaseForm = ({
   );
 };
 
-QuickBaseForm.propTypes = {
+CustomOptionsSelect.propTypes = {
   options: PropTypes.array.isRequired,
   propertyToDisplay: PropTypes.string,
   isString: PropTypes.bool,
@@ -64,4 +64,4 @@ QuickBaseForm.propTypes = {
   lastSelected: PropTypes.number,
 };
 
-export default QuickBaseForm;
+export default CustomOptionsSelect;

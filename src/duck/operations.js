@@ -6,16 +6,19 @@ const receiveInitialDataAction = Creators.receiveInitialData;
 
 const startProjectUpdate = Creators.startProjectUpdate;
 
+const MOCK_CHANNELS = [
+  { id: "email", name: "Email Campaign" },
+  { id: "crm", name: "CRM Sync" },
+  { id: "support", name: "Support Intake" },
+  { id: "analytics", name: "Analytics Export" },
+];
+
 const fetchInitialData = () => {
   return (dispatch) => {
     dispatch(requestInitialDataAction());
 
-    return fetch("api/-/channels", {
-      method: "GET", // *GET, POST, PUT, DELETE, etc.
-    }).then((response) => {
-      response.json().then((data) => {
-        dispatch(receiveInitialDataAction(data));
-      });
+    return Promise.resolve(MOCK_CHANNELS).then((channels) => {
+      dispatch(receiveInitialDataAction(channels));
     });
   };
 };
