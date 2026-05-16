@@ -1,17 +1,21 @@
 .App {
-  background-color: red;
-  background-image: url("https://ak.picdn.net/shutterstock/videos/7886413/thumb/1.jpg");
-  background-size: cover;
-
-  height: 100vh;
-  width: 100vw;
-
+  min-height: 100vh;
+  width: 100%;
   text-align: center;
-
   overflow: auto;
-
   display: flex;
-  flex-direction: column;
-
+  justify-content: center;
   align-items: center;
+  padding: 32px 18px;
+  background:
+    radial-gradient(circle at 15% 20%, rgba(78, 161, 196, 0.16), transparent 28%),
+    linear-gradient(135deg, #f5f7fb 0%, #e9edf4 100%);
+}
+
+@media (max-width: 640px) {
+  .App {
+    align-items: stretch;
+    justify-content: flex-start;
+    padding: 16px 12px;
+  }
 }

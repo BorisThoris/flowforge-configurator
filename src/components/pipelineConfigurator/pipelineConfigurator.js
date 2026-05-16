@@ -20,6 +20,8 @@ const PipelineConfigurator = ({ i18n, channels, GetInitialData, SwitchLang }) =>
 
   const langLocal = i18n.locale;
   const translations = i18n.translations[langLocal];
+  const draftState = pageHasLoaded ? "Local draft active" : "Loading draft";
+  const languageLabel = langLocal === "ar" ? "Arabic" : "English";
 
   useEffect(() => {
     GetInitialData();
@@ -146,11 +148,20 @@ const PipelineConfigurator = ({ i18n, channels, GetInitialData, SwitchLang }) =>
         )}
 
         <div className="formWrapper">
-          {translations.Test}
-          <ButtonComp buttonFunc={changeLang} text="Change Language" />
+          <div className="configuratorHeader">
+            <div>
+              <div className="eyebrowText">FlowForge Configurator</div>
+              <h1 className="formTitle" htmlFor="formTitle">
+                Edit pipeline settings
+              </h1>
+            </div>
+            <ButtonComp buttonFunc={changeLang} text="Switch language" />
+          </div>
 
-          <div className="formTitle">
-            <div htmlFor="formTitle">Edit Pipeline Information</div>
+          <div className="statusBar">
+            <span>Mock save: ready</span>
+            <span>{draftState}</span>
+            <span>Language: {languageLabel}</span>
           </div>
 
           <div className="formBody" htmlFor="FormBody">
@@ -172,13 +183,11 @@ const PipelineConfigurator = ({ i18n, channels, GetInitialData, SwitchLang }) =>
             <div className="formRowSelect">
               <div className="formRowLabel">
                 {"Tags "}
-                {tags.length > 0 && (
-                  <ButtonComp
-                    buttonFunc={() => setIsTagsModalOpn(!isTagsModalOpn)}
-                    noLoading
-                    text="+/-"
-                  />
-                )}
+                <ButtonComp
+                  buttonFunc={() => setIsTagsModalOpn(!isTagsModalOpn)}
+                  noLoading
+                  text="Edit tags"
+                />
               </div>
               <CustomOptionsSelect options={tags} isString />
             </div>
@@ -201,7 +210,7 @@ const PipelineConfigurator = ({ i18n, channels, GetInitialData, SwitchLang }) =>
                   buttonFunc={() => {
                     submitFunc(formChannels, activeFormChannel, label);
                   }}
-                  text="Submit"
+                  text="Save pipeline"
                   disabled={activeFormChannel === null}
                 />
 
@@ -209,7 +218,7 @@ const PipelineConfigurator = ({ i18n, channels, GetInitialData, SwitchLang }) =>
                   buttonFunc={clearForm}
                   grayButton
                   noLoading
-                  text="Clear"
+                  text="Reset draft"
                 />
               </div>
             </div>

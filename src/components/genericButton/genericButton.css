@@ -1,12 +1,40 @@
 .genericButton {
-  background-color: white;
-
-  font-size: 2vw;
-  font-weight: normal;
-
-  border: solid #737373 0.2vh;
+  min-height: 40px;
+  padding: 9px 16px;
+  background-color: #1d6f8f;
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 700;
+  border: 1px solid #1d6f8f;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 120ms ease, border-color 120ms ease, color 120ms ease;
 }
 
 .genericButton.grayButton {
-  color: #737373;
+  background-color: #ffffff;
+  color: #526070;
+  border-color: #bdc8d7;
+}
+
+.genericButton:hover:not(:disabled) {
+  background-color: #155a73;
+  border-color: #155a73;
+}
+
+.genericButton.grayButton:hover:not(:disabled) {
+  background-color: #edf2f7;
+  color: #273246;
+  border-color: #aebaca;
+}
+
+.genericButton:disabled {
+  cursor: not-allowed;
+  opacity: 0.58;
+}
+
+@media (max-width: 640px) {
+  .genericButton {
+    width: 100%;
+  }
 }
