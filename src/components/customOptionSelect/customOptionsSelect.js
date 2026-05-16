@@ -18,11 +18,14 @@ const CustomOptionsSelect = ({
   };
 
   const getOption = (option, index) => {
+    const optionLabel =
+      (propertyToDisplay && option && option[propertyToDisplay]) ||
+      (isString && option) ||
+      "Could not display value";
+
     return (
       <option key={index} value={index}>
-        {option[propertyToDisplay] ||
-          (isString && option) ||
-          "Coult Not Display Value"}
+        {optionLabel}
       </option>
     );
   };
@@ -44,9 +47,13 @@ const CustomOptionsSelect = ({
       className="inputAndSelectSizer selectContainer"
       onChange={onSelectFunc ? onSelectChange : null}
       disabled={!(options.length > 0)}
-      value={lastSelected || undefined}
+      value={
+        lastSelected !== undefined && lastSelected !== null
+          ? lastSelected
+          : undefined
+      }
     >
-      {/* {placeHolderOption}  */}
+      {placeHolderOption}
 
       {/* displays options */}
       {options.length > 0 ? getOptions(options) : <option>No options</option>}

@@ -9,6 +9,42 @@ import TagsModal from "./components/adjustTagsModal/adjustTagsModal";
 import CustomOptionsSelect from "../customOptionSelect/customOptionsSelect";
 import ButtonComp from "../genericButton/genericButton";
 
+const DRAFT_STORAGE_KEY = "lastInputValues";
+
+const getStoredDraft = () => {
+  const storedDraft = localStorage.getItem(DRAFT_STORAGE_KEY);
+
+  if (!storedDraft) return null;
+
+  try {
+    const parsedDraft = JSON.parse(storedDraft);
+
+    if (!parsedDraft || typeof parsedDraft !== "object") return null;
+
+    return {
+      label:
+        typeof parsedDraft.label === "string" ? parsedDraft.label : undefined,
+      tags: Array.isArray(parsedDraft.tags) ? parsedDraft.tags : undefined,
+      activeFormChannel:
+        Number.isInteger(parsedDraft.activeFormChannel) ||
+        typeof parsedDraft.activeFormChannel === "string"
+          ? parsedDraft.activeFormChannel
+          : undefined,
+    };
+  } catch (error) {
+    localStorage.removeItem(DRAFT_STORAGE_KEY);
+    return null;
+  }
+};
+
+const getDraftChannelIndex = (draftChannelIndex) => {
+  if (draftChannelIndex === undefined) return 0;
+
+  const channelIndex = parseInt(draftChannelIndex);
+
+  return Number.isNaN(channelIndex) ? 0 : channelIndex;
+};
+
 const PipelineConfigurator = ({ i18n, channels, GetInitialData, SwitchLang }) => {
   const [pageHasLoaded, setPageHasLoaded] = useState(false);
   const [isTagsModalOpn, setIsTagsModalOpn] = useState(false);
@@ -25,12 +61,12 @@ const PipelineConfigurator = ({ i18n, channels, GetInitialData, SwitchLang }) =>
 
   useEffect(() => {
     GetInitialData();
-  }, []);
+  }, [GetInitialData]);
 
   useEffect(() => {
     if (pageHasLoaded) {
       localStorage.setItem(
-        "lastInputValues",
+        DRAFT_STORAGE_KEY,
         JSON.stringify({
           label: label,
           tags: tags,
@@ -38,18 +74,20 @@ const PipelineConfigurator = ({ i18n, channels, GetInitialData, SwitchLang }) =>
         })
       );
     }
-  }, [label, activeFormChannel, tags]);
+  }, [label, activeFormChannel, pageHasLoaded, tags]);
 
   useEffect(() => {
     if (channels.length > 0) {
-      const lastVals = JSON.parse(localStorage.getItem("lastInputValues"));
+      const lastVals = getStoredDraft();
       const Pipeline = channelService.getPipeline(channels);
 
       if (lastVals) {
-        setLabel(lastVals.label);
-        setTags(lastVals.tags);
+        setLabel(
+          lastVals.label !== undefined ? lastVals.label : Pipeline.pipelineLabel
+        );
+        setTags(lastVals.tags || Pipeline.tags);
         setFormChannels(Pipeline.channels);
-        setActiveFormChannel(lastVals.activeFormChannel);
+        setActiveFormChannel(getDraftChannelIndex(lastVals.activeFormChannel));
       } else {
         setLabel(Pipeline.pipelineLabel);
         setTags(Pipeline.tags);
@@ -104,7 +142,7 @@ const PipelineConfigurator = ({ i18n, channels, GetInitialData, SwitchLang }) =>
     GetInitialData();
 
     setPageHasLoaded(false);
-    localStorage.clear();
+    localStorage.removeItem(DRAFT_STORAGE_KEY);
     SwitchLang("en");
   };
 
