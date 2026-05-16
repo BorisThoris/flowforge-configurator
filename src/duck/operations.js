@@ -27,21 +27,9 @@ const fetchInitialData = () => {
 const updateProject = (passedState) => {
   return (dispatch) => {
     dispatch(startProjectUpdate());
-    /*eslint-disable */
-    //suppress all warnings between comments
-    return fetch(`http://localhost:5000/db`, {
-      method: "PUT",
-      headers: {
-        "Content-type": "application/json; charset=UTF-8",
-      },
-      body: JSON.stringify(passedState),
-    })
-      .then((response) => response.json())
-      .then((json) => {
-        const responseData = json;
-        dispatch(receiveInitialDataAction(responseData));
-      });
-    /*eslint-enable */
+    return Promise.resolve(passedState).then((responseData) => {
+      dispatch(receiveInitialDataAction(responseData));
+    });
   };
 };
 
