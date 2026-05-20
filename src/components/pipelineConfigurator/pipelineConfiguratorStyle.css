@@ -53,6 +53,58 @@
   text-align: left;
 }
 
+.formFeedback {
+  padding: 12px 28px;
+  border-bottom: 1px solid #d9e0ea;
+  color: #273246;
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-align: left;
+}
+
+.formFeedback--info {
+  background-color: #eef5ff;
+  color: #25527a;
+}
+
+.formFeedback--success {
+  background-color: #ecf8f2;
+  color: #1f6f4c;
+}
+
+.formFeedback--error {
+  background-color: #fff1f0;
+  color: #a23a32;
+}
+
+.fieldFeedback {
+  width: 70%;
+  margin-left: auto;
+  margin-top: -10px;
+  color: #a23a32;
+  font-size: 0.88rem;
+  font-weight: 700;
+  text-align: left;
+}
+
+.tagModalFeedback {
+  position: absolute;
+  z-index: 4;
+  top: calc(10% + 92px);
+  left: 50%;
+  width: min(380px, calc(100% - 40px));
+  transform: translateX(-50%);
+  padding: 10px 14px;
+  border: 1px solid #f0b5ae;
+  border-radius: 6px;
+  background-color: #fff1f0;
+  color: #a23a32;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-align: left;
+  box-shadow: 0 8px 18px rgba(30, 42, 62, 0.14);
+}
+
 .formFooter {
   background-color: rgba(173, 173, 173, 0.123);
 }
@@ -150,6 +202,10 @@
     padding: 20px;
   }
 
+  .formFeedback {
+    padding: 12px 20px;
+  }
+
   .formRow,
   .formRowSelect,
   .formRowButtons {
@@ -162,6 +218,11 @@
     min-width: 0;
   }
 
+  .fieldFeedback {
+    width: 100%;
+    margin-top: -2px;
+  }
+
   .inputAndSelectSizer,
   .buttonsContainer {
     flex: none;
@@ -170,5 +231,9 @@
 
   .buttonsContainer {
     flex-direction: column;
+  }
+
+  .tagModalFeedback {
+    top: calc(10% + 110px);
   }
 }

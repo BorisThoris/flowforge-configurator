@@ -45,9 +45,17 @@ const getDraftChannelIndex = (draftChannelIndex) => {
   return Number.isNaN(channelIndex) ? 0 : channelIndex;
 };
 
+const createFeedback = (type, message) => ({
+  type: type,
+  message: message,
+});
+
 const PipelineConfigurator = ({ i18n, channels, GetInitialData, SwitchLang }) => {
   const [pageHasLoaded, setPageHasLoaded] = useState(false);
   const [isTagsModalOpn, setIsTagsModalOpn] = useState(false);
+  const [formFeedback, setFormFeedback] = useState(null);
+  const [labelError, setLabelError] = useState("");
+  const [tagError, setTagError] = useState("");
   //Form values
   const [label, setLabel] = useState("");
   const [tags, setTags] = useState([]);
@@ -95,7 +103,11 @@ const PipelineConfigurator = ({ i18n, channels, GetInitialData, SwitchLang }) =>
       }
 
       if (!pageHasLoaded) {
-        if (lastVals) alert("Last Values Loaded");
+        if (lastVals) {
+          setFormFeedback(
+            createFeedback("info", "Local draft restored from this browser.")
+          );
+        }
         setPageHasLoaded(true);
       }
     }
@@ -106,9 +118,16 @@ const PipelineConfigurator = ({ i18n, channels, GetInitialData, SwitchLang }) =>
     passedActiveFormChannel,
     passedLabel
   ) => {
-    if (passedLabel.length === 0) {
-      return alert("Label Can't be Empty");
+    if (passedLabel.trim().length === 0) {
+      setLabelError("Label is required before saving.");
+      setFormFeedback(
+        createFeedback("error", "Fix the highlighted field before saving.")
+      );
+      return;
     }
+
+    setLabelError("");
+    setFormFeedback(createFeedback("info", "Saving pipeline changes..."));
 
     const currentChannel = JSON.parse(
       JSON.stringify(passedFormChannels[passedActiveFormChannel])
@@ -122,18 +141,31 @@ const PipelineConfigurator = ({ i18n, channels, GetInitialData, SwitchLang }) =>
       default: "",
     };
 
-    const pipeLineUpdated = await channelService.savePipeline(objectToSave);
+    try {
+      const pipeLineUpdated = await channelService.savePipeline(objectToSave);
 
-    if (pipeLineUpdated) {
-      alert("Pipeline Updated");
-      clearForm();
-    } else {
-      alert("Pipeline Update Failed");
+      if (pipeLineUpdated) {
+        setFormFeedback(createFeedback("success", "Pipeline saved."));
+        clearForm({ keepFeedback: true });
+      } else {
+        setFormFeedback(
+          createFeedback("error", "Pipeline save failed. Try again.")
+        );
+      }
+    } catch (error) {
+      setFormFeedback(
+        createFeedback("error", "Pipeline save failed. Try again.")
+      );
     }
   };
 
-  const clearForm = () => {
+  const clearForm = (options = {}) => {
     setIsTagsModalOpn(false);
+    setLabelError("");
+    setTagError("");
+    if (!options.keepFeedback) {
+      setFormFeedback(createFeedback("info", "Draft reset."));
+    }
     //Form values
     setLabel("");
     setTags([]);
@@ -147,21 +179,35 @@ const PipelineConfigurator = ({ i18n, channels, GetInitialData, SwitchLang }) =>
   };
 
   const addTag = (tag, passedTags) => {
-    if (tag === "") alert("Tag Can't be empty");
-    else if (passedTags.includes(tag)) {
-      alert("Cannot Add Duplicate Tags");
+    if (tag === "") {
+      setTagError("Tag name is required.");
+      setFormFeedback(
+        createFeedback("error", "Fix the tag entry before adding it.")
+      );
+    } else if (passedTags.includes(tag)) {
+      setTagError("Tags must be unique.");
+      setFormFeedback(
+        createFeedback("error", "Fix the tag entry before adding it.")
+      );
     } else if (passedTags.length > 4) {
-      alert("Cannot Add More Than 5 Tags");
+      setTagError("A pipeline can have up to 5 tags.");
+      setFormFeedback(
+        createFeedback("error", "Fix the tag entry before adding it.")
+      );
     } else {
       const newTags = passedTags.map((tag) => tag);
       newTags.push(tag);
 
+      setTagError("");
+      setFormFeedback(createFeedback("success", "Tag added."));
       setTags(newTags);
     }
   };
 
   const removeTag = (tagIndex, passedTags) => {
     const newTags = passedTags.filter((tag, index) => index !== tagIndex);
+    setTagError("");
+    setFormFeedback(createFeedback("info", "Tag removed."));
     setTags(newTags);
   };
 
@@ -184,6 +230,11 @@ const PipelineConfigurator = ({ i18n, channels, GetInitialData, SwitchLang }) =>
             addTag={addTag}
           ></TagsModal>
         )}
+        {isTagsModalOpn && tagError && (
+          <div className="tagModalFeedback" role="alert">
+            {tagError}
+          </div>
+        )}
 
         <div className="formWrapper">
           <div className="configuratorHeader">
@@ -202,6 +253,15 @@ const PipelineConfigurator = ({ i18n, channels, GetInitialData, SwitchLang }) =>
             <span>Language: {languageLabel}</span>
           </div>
 
+          {formFeedback && (
+            <div
+              className={"formFeedback formFeedback--" + formFeedback.type}
+              role={formFeedback.type === "error" ? "alert" : "status"}
+            >
+              {formFeedback.message}
+            </div>
+          )}
+
           <div className="formBody" htmlFor="FormBody">
             {/*  */}
             <div className="formRow">
@@ -213,10 +273,22 @@ const PipelineConfigurator = ({ i18n, channels, GetInitialData, SwitchLang }) =>
                 type="text"
                 value={label}
                 placeholder={"No Given Label"}
-                onChange={(e) => setLabel(e.target.value)}
+                onChange={(e) => {
+                  setLabel(e.target.value);
+                  if (e.target.value.trim().length > 0) {
+                    setLabelError("");
+                  }
+                }}
                 htmlFor="Input for Label"
+                aria-invalid={labelError ? "true" : "false"}
+                aria-describedby={labelError ? "labelFeedback" : undefined}
               />
             </div>
+            {labelError && (
+              <div className="fieldFeedback" id="labelFeedback" role="alert">
+                {labelError}
+              </div>
+            )}
 
             <div className="formRowSelect">
               <div className="formRowLabel">
@@ -229,6 +301,11 @@ const PipelineConfigurator = ({ i18n, channels, GetInitialData, SwitchLang }) =>
               </div>
               <CustomOptionsSelect options={tags} isString />
             </div>
+            {tagError && (
+              <div className="fieldFeedback" role="alert">
+                {tagError}
+              </div>
+            )}
 
             <div className="formRowSelect">
               <div className="formRowLabel">Channel</div>
