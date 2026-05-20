@@ -118,6 +118,8 @@ const PipelineConfigurator = ({ i18n, channels, GetInitialData, SwitchLang }) =>
     passedActiveFormChannel,
     passedLabel
   ) => {
+    const selectedChannel = passedFormChannels[passedActiveFormChannel];
+
     if (passedLabel.trim().length === 0) {
       setLabelError("Label is required before saving.");
       setFormFeedback(
@@ -126,12 +128,17 @@ const PipelineConfigurator = ({ i18n, channels, GetInitialData, SwitchLang }) =>
       return;
     }
 
+    if (!selectedChannel) {
+      setFormFeedback(
+        createFeedback("error", "Choose a channel before saving.")
+      );
+      return;
+    }
+
     setLabelError("");
     setFormFeedback(createFeedback("info", "Saving pipeline changes..."));
 
-    const currentChannel = JSON.parse(
-      JSON.stringify(passedFormChannels[passedActiveFormChannel])
-    );
+    const currentChannel = JSON.parse(JSON.stringify(selectedChannel));
 
     const objectToSave = {
       pipelineLabel: passedLabel,
@@ -326,7 +333,7 @@ const PipelineConfigurator = ({ i18n, channels, GetInitialData, SwitchLang }) =>
                     submitFunc(formChannels, activeFormChannel, label);
                   }}
                   text="Save pipeline"
-                  disabled={activeFormChannel === null}
+                  disabled={!formChannels.length || activeFormChannel === null}
                 />
 
                 <ButtonComp
