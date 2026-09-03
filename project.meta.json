@@ -1,0 +1,159 @@
+{
+  "$schema": "./scripts/project.meta.schema.json",
+  "schemaVersion": 1,
+  "generatedAt": "2026-09-03T20:39:09.209Z",
+  "generatedBy": "scripts/generate-project-meta.mjs",
+  "identity": {
+    "slug": "flowforge-configurator",
+    "repoName": "quick-base-task",
+    "packageName": "flowforge-configurator",
+    "version": "0.1.0",
+    "title": "Flowforge Configurator",
+    "subtitle": "Mocked configuration UI",
+    "description": "A React/Redux configuration demo with local mocked save/update flows for a self-contained portfolio build.",
+    "tags": [
+      "React",
+      "Redux",
+      "Mock Data"
+    ],
+    "accent": "#14b8a6",
+    "classification": "web-app",
+    "showcaseTier": "more"
+  },
+  "links": {
+    "deploymentUrl": "https://flowforge-configurator-git.pages.dev/",
+    "localUrl": "http://127.0.0.1:4112/",
+    "repository": "https://github.com/BorisThoris/flowforge-configurator"
+  },
+  "runtime": {
+    "packageManager": "npm",
+    "buildCommand": "npm run build",
+    "buildOutput": "build",
+    "runCommand": "npm start",
+    "devPort": 4112,
+    "scripts": [
+      "start",
+      "build",
+      "test",
+      "eject",
+      "meta",
+      "meta:check"
+    ]
+  },
+  "capture": {
+    "route": "/"
+  },
+  "media": {
+    "source": "portfolio-capture",
+    "directory": "C:/Users/Gaming PC/Desktop/Repos/portfolio/public/project-shots/flowforge-configurator/latest",
+    "primary": "/project-shots/flowforge-configurator/latest/card.jpg",
+    "images": [
+      {
+        "profile": "card",
+        "file": "card.jpg",
+        "path": "/project-shots/flowforge-configurator/latest/card.jpg",
+        "bytes": 59586,
+        "width": 1600,
+        "height": 900,
+        "capturedAt": "2026-08-27T12:16:16.727Z"
+      },
+      {
+        "profile": "desktop",
+        "file": "desktop.jpg",
+        "path": "/project-shots/flowforge-configurator/latest/desktop.jpg",
+        "bytes": 58347,
+        "width": 1440,
+        "height": 900,
+        "capturedAt": "2026-08-27T12:16:18.656Z"
+      },
+      {
+        "profile": "full",
+        "file": "full.jpg",
+        "path": "/project-shots/flowforge-configurator/latest/full.jpg",
+        "bytes": 51201,
+        "width": 1440,
+        "height": 900,
+        "capturedAt": "2026-08-27T12:16:22.421Z"
+      },
+      {
+        "profile": "mobile",
+        "file": "mobile.jpg",
+        "path": "/project-shots/flowforge-configurator/latest/mobile.jpg",
+        "bytes": 40011,
+        "width": 430,
+        "height": 932,
+        "capturedAt": "2026-08-27T12:16:20.539Z"
+      }
+    ]
+  },
+  "stack": {
+    "framework": "React",
+    "language": "JavaScript",
+    "runtimeTargets": [
+      "web"
+    ],
+    "libraries": [
+      {
+        "name": "react",
+        "version": "^16.13.1"
+      },
+      {
+        "name": "react-dom",
+        "version": "^16.13.1"
+      },
+      {
+        "name": "redux",
+        "version": "^4.0.5"
+      }
+    ],
+    "testing": [
+      "@testing-library/react"
+    ],
+    "dependencyCount": 15,
+    "devDependencyCount": 0
+  },
+  "metrics": {
+    "sourceFiles": 27,
+    "testFiles": 1,
+    "sourceLines": 2073,
+    "largestDirectories": [
+      {
+        "directory": "src",
+        "files": 24
+      },
+      {
+        "directory": "scripts",
+        "files": 2
+      },
+      {
+        "directory": "public",
+        "files": 1
+      }
+    ],
+    "hasReadme": true,
+    "hasTests": true,
+    "hasCi": false,
+    "hasDocs": false
+  },
+  "scores": {
+    "priorityScore": 61,
+    "demoabilityScore": 64,
+    "depthScore": 62,
+    "polishScore": 62,
+    "uniquenessScore": 60,
+    "maintenanceScore": 56
+  },
+  "analysisNotes": "React/Redux configuration UI with mock flows; build fallback is reliable while its old CRA dev server is less stable locally.",
+  "git": {
+    "branch": "ai/refine-flowforge-configurator-cycle-02",
+    "head": "38b8e34",
+    "lastCommitDate": "2026-05-20T23:51:32+03:00",
+    "lastCommitSubject": "Preserve verified work before AI refine flowforge-configurator",
+    "commitCount": 11,
+    "remote": "https://github.com/BorisThoris/flowforge-configurator.git"
+  },
+  "readme": {
+    "file": "README.md",
+    "heading": "FlowForge Configurator"
+  }
+}
