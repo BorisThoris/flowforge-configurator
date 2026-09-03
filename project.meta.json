@@ -1,7 +1,7 @@
 {
   "$schema": "./scripts/project.meta.schema.json",
   "schemaVersion": 1,
-  "generatedAt": "2026-09-03T20:45:32.385Z",
+  "generatedAt": "2026-09-03T21:50:30.792Z",
   "generatedBy": "scripts/generate-project-meta.mjs",
   "identity": {
     "slug": "flowforge-configurator",
@@ -37,52 +37,64 @@
       "test",
       "eject",
       "meta",
-      "meta:check"
+      "meta:check",
+      "shots",
+      "social",
+      "social:check"
     ]
   },
   "capture": {
     "route": "/"
   },
   "media": {
-    "source": "portfolio-capture",
-    "directory": "C:/Users/Gaming PC/Desktop/Repos/portfolio/public/project-shots/flowforge-configurator/latest",
-    "primary": "/project-shots/flowforge-configurator/latest/card.jpg",
+    "source": "repo-local",
+    "directory": "C:/Users/Gaming PC/Desktop/Repos/quick-base-task/project-media",
+    "primary": "project-media/card.jpg",
     "images": [
       {
         "profile": "card",
         "file": "card.jpg",
-        "path": "/project-shots/flowforge-configurator/latest/card.jpg",
-        "bytes": 59586,
+        "path": "project-media/card.jpg",
+        "bytes": 59637,
         "width": 1600,
         "height": 900,
-        "capturedAt": "2026-08-27T12:16:16.727Z"
+        "capturedAt": "2026-09-03T21:36:29.295Z"
       },
       {
         "profile": "desktop",
         "file": "desktop.jpg",
-        "path": "/project-shots/flowforge-configurator/latest/desktop.jpg",
-        "bytes": 58347,
+        "path": "project-media/desktop.jpg",
+        "bytes": 58398,
         "width": 1440,
         "height": 900,
-        "capturedAt": "2026-08-27T12:16:18.656Z"
+        "capturedAt": "2026-09-03T21:36:30.742Z"
       },
       {
         "profile": "full",
         "file": "full.jpg",
-        "path": "/project-shots/flowforge-configurator/latest/full.jpg",
-        "bytes": 51201,
+        "path": "project-media/full.jpg",
+        "bytes": 51247,
         "width": 1440,
         "height": 900,
-        "capturedAt": "2026-08-27T12:16:22.421Z"
+        "capturedAt": "2026-09-03T21:36:33.664Z"
       },
       {
         "profile": "mobile",
         "file": "mobile.jpg",
-        "path": "/project-shots/flowforge-configurator/latest/mobile.jpg",
-        "bytes": 40011,
+        "path": "project-media/mobile.jpg",
+        "bytes": 40006,
         "width": 430,
         "height": 932,
-        "capturedAt": "2026-08-27T12:16:20.539Z"
+        "capturedAt": "2026-09-03T21:36:32.198Z"
+      },
+      {
+        "profile": "og",
+        "file": "og.jpg",
+        "path": "project-media/og.jpg",
+        "bytes": 58094,
+        "width": 1200,
+        "height": 630,
+        "capturedAt": "2026-09-03T21:36:35.103Z"
       }
     ]
   },
@@ -113,9 +125,9 @@
     "devDependencyCount": 0
   },
   "metrics": {
-    "sourceFiles": 27,
+    "sourceFiles": 29,
     "testFiles": 1,
-    "sourceLines": 2076,
+    "sourceLines": 2537,
     "largestDirectories": [
       {
         "directory": "src",
@@ -123,7 +135,7 @@
       },
       {
         "directory": "scripts",
-        "files": 2
+        "files": 4
       },
       {
         "directory": "public",
@@ -146,10 +158,10 @@
   "analysisNotes": "React/Redux configuration UI with mock flows; build fallback is reliable while its old CRA dev server is less stable locally.",
   "git": {
     "branch": "ai/refine-flowforge-configurator-cycle-02",
-    "head": "c88dca8",
-    "lastCommitDate": "2026-09-03T23:42:38+03:00",
-    "lastCommitSubject": "Wire up the meta scripts",
-    "commitCount": 13,
+    "head": "2f6b082",
+    "lastCommitDate": "2026-09-03T23:46:16+03:00",
+    "lastCommitSubject": "Refresh project metadata",
+    "commitCount": 14,
     "remote": "https://github.com/BorisThoris/flowforge-configurator.git"
   },
   "readme": {
