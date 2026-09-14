@@ -1,7 +1,7 @@
 {
   "$schema": "./scripts/project.meta.schema.json",
   "schemaVersion": 1,
-  "generatedAt": "2026-09-14T20:41:27.420Z",
+  "generatedAt": "2026-09-14T20:52:46.806Z",
   "generatedBy": "scripts/generate-project-meta.mjs",
   "identity": {
     "slug": "flowforge-configurator",
@@ -130,7 +130,7 @@
   "metrics": {
     "sourceFiles": 31,
     "testFiles": 1,
-    "sourceLines": 3010,
+    "sourceLines": 3027,
     "largestDirectories": [
       {
         "directory": "src",
@@ -161,10 +161,10 @@
   "analysisNotes": "React/Redux configuration UI with mock flows; build fallback is reliable while its old CRA dev server is less stable locally.",
   "git": {
     "branch": "ai/refine-flowforge-configurator-cycle-02",
-    "head": "2a1d4c8",
-    "lastCommitDate": "2026-09-04T00:53:30+03:00",
-    "lastCommitSubject": "Wire up the shots and social scripts",
-    "commitCount": 16,
+    "head": "9b1bcbe",
+    "lastCommitDate": "2026-09-14T23:44:44+03:00",
+    "lastCommitSubject": "Add the icon set and the one-command metadata refresh",
+    "commitCount": 17,
     "remote": "https://github.com/BorisThoris/flowforge-configurator.git"
   },
   "readme": {
