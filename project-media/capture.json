@@ -1,6 +1,6 @@
 {
   "slug": "flowforge-configurator",
-  "capturedAt": "2026-09-03T21:36:35.155Z",
+  "capturedAt": "2026-09-14T22:41:11.645Z",
   "source": "deployment",
   "url": "https://flowforge-configurator-git.pages.dev/",
   "recipe": {
@@ -12,7 +12,7 @@
       "file": "card.jpg",
       "width": 1600,
       "height": 900,
-      "bytes": 59637,
+      "bytes": 59810,
       "status": "captured"
     },
     {
@@ -20,7 +20,7 @@
       "file": "desktop.jpg",
       "width": 1440,
       "height": 900,
-      "bytes": 58398,
+      "bytes": 58620,
       "status": "captured"
     },
     {
@@ -28,7 +28,7 @@
       "file": "mobile.jpg",
       "width": 430,
       "height": 932,
-      "bytes": 40006,
+      "bytes": 38905,
       "status": "captured"
     },
     {
@@ -36,7 +36,7 @@
       "file": "full.jpg",
       "width": 1440,
       "height": 900,
-      "bytes": 51247,
+      "bytes": 51588,
       "status": "captured"
     },
     {
@@ -44,7 +44,7 @@
       "file": "og.jpg",
       "width": 1200,
       "height": 630,
-      "bytes": 58094,
+      "bytes": 57291,
       "status": "captured"
     }
   ]
