@@ -1,0 +1,17 @@
+{
+  "slug": "flowforge-configurator",
+  "source": "public/favicon.svg",
+  "sourceHash": "bbe7feb89efc514f",
+  "outputDir": "public",
+  "urlPrefix": "/",
+  "renderedAt": "2026-09-14T20:40:13.096Z",
+  "files": [
+    "favicon.ico",
+    "apple-touch-icon.png",
+    "icon-192.png",
+    "icon-512.png",
+    "icon-maskable-512.png",
+    "favicon.svg",
+    "site.webmanifest"
+  ]
+}

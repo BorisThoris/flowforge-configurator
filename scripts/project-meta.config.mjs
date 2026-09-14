@@ -61,6 +61,13 @@ export default {
     "imageUrlPath": "/og-image.jpg"
   },
 
+  // The icon set is rendered from favicon.svg by scripts/generate-app-icons.mjs.
+  icons: {
+    "background": "#042f2e",
+    "themeColor": "#042f2e",
+    "shortName": "Flowforge"
+  },
+
   media: {
     sourceDir: path.join(portfolioRoot, "public", "project-shots", "flowforge-configurator", "latest"),
     publicPathPrefix: "/project-shots/flowforge-configurator/latest",
