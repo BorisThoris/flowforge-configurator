@@ -1,11 +1,11 @@
 {
   "$schema": "./scripts/project.meta.schema.json",
   "schemaVersion": 1,
-  "generatedAt": "2026-09-14T21:36:25.827Z",
+  "generatedAt": "2026-09-14T22:07:49.596Z",
   "generatedBy": "scripts/generate-project-meta.mjs",
   "identity": {
     "slug": "flowforge-configurator",
-    "repoName": "quick-base-task",
+    "repoName": "flowforge-configurator",
     "packageName": "flowforge-configurator",
     "version": "0.1.0",
     "title": "Flowforge Configurator",
@@ -130,7 +130,7 @@
   "metrics": {
     "sourceFiles": 31,
     "testFiles": 1,
-    "sourceLines": 3038,
+    "sourceLines": 3047,
     "largestDirectories": [
       {
         "directory": "src",
@@ -161,10 +161,10 @@
   "analysisNotes": "React/Redux configuration UI with mock flows; build fallback is reliable while its old CRA dev server is less stable locally.",
   "git": {
     "branch": "ai/refine-flowforge-configurator-cycle-02",
-    "head": "c86da8b",
-    "lastCommitDate": "2026-09-14T23:59:15+03:00",
-    "lastCommitSubject": "Sync the metadata toolkit scripts and regenerate project.meta.json",
-    "commitCount": 18,
+    "head": "8dbb10e",
+    "lastCommitDate": "2026-09-15T00:42:26+03:00",
+    "lastCommitSubject": "Gate pushes on a current link-preview card and icon set",
+    "commitCount": 19,
     "remote": "https://github.com/BorisThoris/flowforge-configurator.git"
   },
   "readme": {
