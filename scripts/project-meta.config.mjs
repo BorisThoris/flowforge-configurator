@@ -18,12 +18,13 @@ export default {
 
   curated: {
     "title": "Flowforge Configurator",
-    "subtitle": "Mocked configuration UI",
-    "description": "A React/Redux configuration demo with local mocked save/update flows for a self-contained portfolio build.",
+    "subtitle": "A pipeline configuration form with drafts and tags",
+    "description": "A React and Redux configuration form for pipeline-style records: load channels, edit fields and tags with validation, keep a local draft between visits, switch languages, and save a transformed pipeline object through a mocked API.",
     "tags": [
       "React",
       "Redux",
-      "Mock Data"
+      "Forms",
+      "i18next"
     ],
     "accent": "#14b8a6",
     "deploymentUrl": "https://flowforge-configurator-git.pages.dev/",
@@ -56,6 +57,7 @@ export default {
   // Graph tags, and the static directory the image is published from.
   social: {
     "htmlFile": "public/index.html",
+    "pageTitle": "Flowforge Configurator",
     "staticDir": "public",
     "imageName": "og-image.jpg",
     "imageUrlPath": "/og-image.jpg"

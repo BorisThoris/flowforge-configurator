@@ -1,7 +1,7 @@
 {
   "name": "Flowforge Configurator",
   "short_name": "Flowforge",
-  "description": "A React/Redux configuration demo with local mocked save/update flows for a self-contained portfolio build.",
+  "description": "A React and Redux configuration form for pipeline-style records: load channels, edit fields and tags with validation, keep a local draft between visits, switch languages, and save a transformed pipeline object through a mocked API.",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",

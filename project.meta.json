@@ -1,7 +1,7 @@
 {
   "$schema": "./scripts/project.meta.schema.json",
   "schemaVersion": 1,
-  "generatedAt": "2026-09-14T22:41:11.773Z",
+  "generatedAt": "2026-09-15T12:22:39.835Z",
   "generatedBy": "scripts/generate-project-meta.mjs",
   "identity": {
     "slug": "flowforge-configurator",
@@ -9,12 +9,13 @@
     "packageName": "flowforge-configurator",
     "version": "0.1.0",
     "title": "Flowforge Configurator",
-    "subtitle": "Mocked configuration UI",
-    "description": "A React/Redux configuration demo with local mocked save/update flows for a self-contained portfolio build.",
+    "subtitle": "A pipeline configuration form with drafts and tags",
+    "description": "A React and Redux configuration form for pipeline-style records: load channels, edit fields and tags with validation, keep a local draft between visits, switch languages, and save a transformed pipeline object through a mocked API.",
     "tags": [
       "React",
       "Redux",
-      "Mock Data"
+      "Forms",
+      "i18next"
     ],
     "accent": "#14b8a6",
     "classification": "web-app",
@@ -51,7 +52,7 @@
   },
   "media": {
     "source": "repo-local",
-    "directory": "/home/runner/work/flowforge-configurator/flowforge-configurator/project-media",
+    "directory": "C:/Users/Gaming PC/AppData/Local/Temp/claude/quick-base-task-copy-wt/project-media",
     "primary": "project-media/card.jpg",
     "images": [
       {
@@ -61,7 +62,7 @@
         "bytes": 59810,
         "width": 1600,
         "height": 900,
-        "capturedAt": "2026-09-14T22:41:05.763Z"
+        "capturedAt": "2026-09-15T12:22:37.583Z"
       },
       {
         "profile": "desktop",
@@ -70,7 +71,7 @@
         "bytes": 58620,
         "width": 1440,
         "height": 900,
-        "capturedAt": "2026-09-14T22:41:07.245Z"
+        "capturedAt": "2026-09-15T12:22:37.596Z"
       },
       {
         "profile": "full",
@@ -79,7 +80,7 @@
         "bytes": 51588,
         "width": 1440,
         "height": 900,
-        "capturedAt": "2026-09-14T22:41:10.161Z"
+        "capturedAt": "2026-09-15T12:22:37.603Z"
       },
       {
         "profile": "mobile",
@@ -88,7 +89,7 @@
         "bytes": 38905,
         "width": 430,
         "height": 932,
-        "capturedAt": "2026-09-14T22:41:08.681Z"
+        "capturedAt": "2026-09-15T12:22:37.616Z"
       },
       {
         "profile": "og",
@@ -97,7 +98,7 @@
         "bytes": 57291,
         "width": 1200,
         "height": 630,
-        "capturedAt": "2026-09-14T22:41:11.620Z"
+        "capturedAt": "2026-09-15T12:22:37.623Z"
       }
     ]
   },
@@ -130,7 +131,7 @@
   "metrics": {
     "sourceFiles": 31,
     "testFiles": 1,
-    "sourceLines": 2836,
+    "sourceLines": 2876,
     "largestDirectories": [
       {
         "directory": "src",
@@ -160,12 +161,12 @@
   },
   "analysisNotes": "React/Redux configuration UI with mock flows; build fallback is reliable while its old CRA dev server is less stable locally.",
   "git": {
-    "branch": "master",
-    "head": "877074c",
-    "lastCommitDate": "2026-09-15T01:08:01+03:00",
-    "lastCommitSubject": "Refresh screenshots, card, icons and metadata after every deployment",
-    "commitCount": 18,
-    "remote": "https://github.com/BorisThoris/flowforge-configurator"
+    "branch": "meta/copy-21443c4",
+    "head": "bf405ef",
+    "lastCommitDate": "2026-09-15T01:52:10+03:00",
+    "lastCommitSubject": "Let the refresh wait up to 90 minutes for a queued Cloudflare build [meta-bot]",
+    "commitCount": 20,
+    "remote": "https://github.com/BorisThoris/flowforge-configurator.git"
   },
   "readme": {
     "file": "README.md",
