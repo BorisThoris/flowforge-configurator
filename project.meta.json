@@ -1,7 +1,7 @@
 {
   "$schema": "./scripts/project.meta.schema.json",
   "schemaVersion": 1,
-  "generatedAt": "2026-09-14T22:07:49.596Z",
+  "generatedAt": "2026-09-15T12:15:33.720Z",
   "generatedBy": "scripts/generate-project-meta.mjs",
   "identity": {
     "slug": "flowforge-configurator",
@@ -9,12 +9,13 @@
     "packageName": "flowforge-configurator",
     "version": "0.1.0",
     "title": "Flowforge Configurator",
-    "subtitle": "Mocked configuration UI",
-    "description": "A React/Redux configuration demo with local mocked save/update flows for a self-contained portfolio build.",
+    "subtitle": "A pipeline configuration form with drafts and tags",
+    "description": "A React and Redux configuration form for pipeline-style records: load channels, edit fields and tags with validation, keep a local draft between visits, switch languages, and save a transformed pipeline object through a mocked API.",
     "tags": [
       "React",
       "Redux",
-      "Mock Data"
+      "Forms",
+      "i18next"
     ],
     "accent": "#14b8a6",
     "classification": "web-app",
@@ -130,7 +131,7 @@
   "metrics": {
     "sourceFiles": 31,
     "testFiles": 1,
-    "sourceLines": 3047,
+    "sourceLines": 3087,
     "largestDirectories": [
       {
         "directory": "src",
@@ -161,10 +162,10 @@
   "analysisNotes": "React/Redux configuration UI with mock flows; build fallback is reliable while its old CRA dev server is less stable locally.",
   "git": {
     "branch": "ai/refine-flowforge-configurator-cycle-02",
-    "head": "8dbb10e",
-    "lastCommitDate": "2026-09-15T00:42:26+03:00",
-    "lastCommitSubject": "Gate pushes on a current link-preview card and icon set",
-    "commitCount": 19,
+    "head": "57fc310",
+    "lastCommitDate": "2026-09-15T01:52:02+03:00",
+    "lastCommitSubject": "Let the refresh wait up to 90 minutes for a queued Cloudflare build [meta-bot]",
+    "commitCount": 21,
     "remote": "https://github.com/BorisThoris/flowforge-configurator.git"
   },
   "readme": {
