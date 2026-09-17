@@ -1,7 +1,7 @@
 {
   "$schema": "./scripts/project.meta.schema.json",
   "schemaVersion": 1,
-  "generatedAt": "2026-09-15T12:15:33.720Z",
+  "generatedAt": "2026-09-17T10:25:11.314Z",
   "generatedBy": "scripts/generate-project-meta.mjs",
   "identity": {
     "slug": "flowforge-configurator",
@@ -59,28 +59,28 @@
         "profile": "card",
         "file": "card.jpg",
         "path": "project-media/card.jpg",
-        "bytes": 59637,
+        "bytes": 59589,
         "width": 1600,
         "height": 900,
-        "capturedAt": "2026-09-03T21:36:29.295Z"
+        "capturedAt": "2026-09-17T10:25:05.114Z"
       },
       {
         "profile": "desktop",
         "file": "desktop.jpg",
         "path": "project-media/desktop.jpg",
-        "bytes": 58398,
+        "bytes": 58363,
         "width": 1440,
         "height": 900,
-        "capturedAt": "2026-09-03T21:36:30.742Z"
+        "capturedAt": "2026-09-17T10:25:06.509Z"
       },
       {
         "profile": "full",
         "file": "full.jpg",
         "path": "project-media/full.jpg",
-        "bytes": 51247,
+        "bytes": 51213,
         "width": 1440,
         "height": 900,
-        "capturedAt": "2026-09-03T21:36:33.664Z"
+        "capturedAt": "2026-09-17T10:25:09.294Z"
       },
       {
         "profile": "mobile",
@@ -89,16 +89,16 @@
         "bytes": 40006,
         "width": 430,
         "height": 932,
-        "capturedAt": "2026-09-03T21:36:32.198Z"
+        "capturedAt": "2026-09-17T10:25:07.902Z"
       },
       {
         "profile": "og",
         "file": "og.jpg",
         "path": "project-media/og.jpg",
-        "bytes": 58094,
+        "bytes": 58103,
         "width": 1200,
         "height": 630,
-        "capturedAt": "2026-09-03T21:36:35.103Z"
+        "capturedAt": "2026-09-17T10:25:10.690Z"
       }
     ]
   },
@@ -162,10 +162,10 @@
   "analysisNotes": "React/Redux configuration UI with mock flows; build fallback is reliable while its old CRA dev server is less stable locally.",
   "git": {
     "branch": "ai/refine-flowforge-configurator-cycle-02",
-    "head": "57fc310",
-    "lastCommitDate": "2026-09-15T01:52:02+03:00",
-    "lastCommitSubject": "Let the refresh wait up to 90 minutes for a queued Cloudflare build [meta-bot]",
-    "commitCount": 21,
+    "head": "21443c4",
+    "lastCommitDate": "2026-09-15T15:22:29+03:00",
+    "lastCommitSubject": "Say what the app actually is: specific title, blurb and tags for the card",
+    "commitCount": 22,
     "remote": "https://github.com/BorisThoris/flowforge-configurator.git"
   },
   "readme": {
