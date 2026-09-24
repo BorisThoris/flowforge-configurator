@@ -1,7 +1,7 @@
 {
   "$schema": "./scripts/project.meta.schema.json",
   "schemaVersion": 1,
-  "generatedAt": "2026-09-24T15:07:32.537Z",
+  "generatedAt": "2026-09-24T16:32:11.410Z",
   "generatedBy": "scripts/generate-project-meta.mjs",
   "identity": {
     "slug": "flowforge-configurator",
@@ -64,7 +64,7 @@
         "bytes": 59810,
         "width": 1600,
         "height": 900,
-        "capturedAt": "2026-09-24T15:07:26.472Z"
+        "capturedAt": "2026-09-24T16:32:05.470Z"
       },
       {
         "profile": "desktop",
@@ -73,7 +73,7 @@
         "bytes": 58620,
         "width": 1440,
         "height": 900,
-        "capturedAt": "2026-09-24T15:07:27.920Z"
+        "capturedAt": "2026-09-24T16:32:06.917Z"
       },
       {
         "profile": "full",
@@ -82,7 +82,7 @@
         "bytes": 51588,
         "width": 1440,
         "height": 900,
-        "capturedAt": "2026-09-24T15:07:30.868Z"
+        "capturedAt": "2026-09-24T16:32:09.833Z"
       },
       {
         "profile": "mobile",
@@ -91,7 +91,7 @@
         "bytes": 38905,
         "width": 430,
         "height": 932,
-        "capturedAt": "2026-09-24T15:07:29.390Z"
+        "capturedAt": "2026-09-24T16:32:08.371Z"
       },
       {
         "profile": "og",
@@ -100,7 +100,7 @@
         "bytes": 57291,
         "width": 1200,
         "height": 630,
-        "capturedAt": "2026-09-24T15:07:32.380Z"
+        "capturedAt": "2026-09-24T16:32:11.260Z"
       }
     ]
   },
@@ -133,7 +133,7 @@
   "metrics": {
     "sourceFiles": 32,
     "testFiles": 1,
-    "sourceLines": 3457,
+    "sourceLines": 3480,
     "largestDirectories": [
       {
         "directory": "src",
@@ -164,10 +164,10 @@
   "analysisNotes": "React/Redux configuration UI with mock flows; build fallback is reliable while its old CRA dev server is less stable locally.",
   "git": {
     "branch": "master",
-    "head": "49526a0",
-    "lastCommitDate": "2026-09-24T16:47:15+03:00",
+    "head": "434a2ac",
+    "lastCommitDate": "2026-09-24T19:16:54+03:00",
     "lastCommitSubject": "Update the metadata toolkit scripts: trailers step, refresh --commit, capture.skip",
-    "commitCount": 25,
+    "commitCount": 27,
     "remote": "https://github.com/BorisThoris/flowforge-configurator"
   },
   "readme": {
