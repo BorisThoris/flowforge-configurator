@@ -1,7 +1,7 @@
 {
   "$schema": "./scripts/project.meta.schema.json",
   "schemaVersion": 1,
-  "generatedAt": "2026-09-15T12:43:30.289Z",
+  "generatedAt": "2026-09-24T15:07:32.537Z",
   "generatedBy": "scripts/generate-project-meta.mjs",
   "identity": {
     "slug": "flowforge-configurator",
@@ -44,7 +44,9 @@
       "social:check",
       "icons",
       "icons:check",
-      "meta:refresh"
+      "meta:refresh",
+      "trailers",
+      "trailers:check"
     ]
   },
   "capture": {
@@ -62,7 +64,7 @@
         "bytes": 59810,
         "width": 1600,
         "height": 900,
-        "capturedAt": "2026-09-15T12:43:24.427Z"
+        "capturedAt": "2026-09-24T15:07:26.472Z"
       },
       {
         "profile": "desktop",
@@ -71,7 +73,7 @@
         "bytes": 58620,
         "width": 1440,
         "height": 900,
-        "capturedAt": "2026-09-15T12:43:25.858Z"
+        "capturedAt": "2026-09-24T15:07:27.920Z"
       },
       {
         "profile": "full",
@@ -80,7 +82,7 @@
         "bytes": 51588,
         "width": 1440,
         "height": 900,
-        "capturedAt": "2026-09-15T12:43:28.707Z"
+        "capturedAt": "2026-09-24T15:07:30.868Z"
       },
       {
         "profile": "mobile",
@@ -89,7 +91,7 @@
         "bytes": 38905,
         "width": 430,
         "height": 932,
-        "capturedAt": "2026-09-15T12:43:27.278Z"
+        "capturedAt": "2026-09-24T15:07:29.390Z"
       },
       {
         "profile": "og",
@@ -98,7 +100,7 @@
         "bytes": 57291,
         "width": 1200,
         "height": 630,
-        "capturedAt": "2026-09-15T12:43:30.134Z"
+        "capturedAt": "2026-09-24T15:07:32.380Z"
       }
     ]
   },
@@ -129,9 +131,9 @@
     "devDependencyCount": 0
   },
   "metrics": {
-    "sourceFiles": 31,
+    "sourceFiles": 32,
     "testFiles": 1,
-    "sourceLines": 2876,
+    "sourceLines": 3457,
     "largestDirectories": [
       {
         "directory": "src",
@@ -139,7 +141,7 @@
       },
       {
         "directory": "scripts",
-        "files": 6
+        "files": 7
       },
       {
         "directory": "public",
@@ -162,10 +164,10 @@
   "analysisNotes": "React/Redux configuration UI with mock flows; build fallback is reliable while its old CRA dev server is less stable locally.",
   "git": {
     "branch": "master",
-    "head": "1f2079e",
-    "lastCommitDate": "2026-09-15T15:22:41+03:00",
-    "lastCommitSubject": "Say what the app actually is: specific title, blurb and tags for the card",
-    "commitCount": 21,
+    "head": "49526a0",
+    "lastCommitDate": "2026-09-24T16:47:15+03:00",
+    "lastCommitSubject": "Update the metadata toolkit scripts: trailers step, refresh --commit, capture.skip",
+    "commitCount": 25,
     "remote": "https://github.com/BorisThoris/flowforge-configurator"
   },
   "readme": {
