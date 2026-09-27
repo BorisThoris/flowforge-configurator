@@ -1,7 +1,7 @@
 {
   "$schema": "./scripts/project.meta.schema.json",
   "schemaVersion": 1,
-  "generatedAt": "2026-09-27T13:35:51.155Z",
+  "generatedAt": "2026-09-27T14:46:45.022Z",
   "generatedBy": "scripts/generate-project-meta.mjs",
   "identity": {
     "slug": "flowforge-configurator",
@@ -82,7 +82,7 @@
         "bytes": 60505,
         "width": 1600,
         "height": 900,
-        "capturedAt": "2026-09-27T13:35:43.972Z"
+        "capturedAt": "2026-09-27T14:46:37.464Z"
       },
       {
         "profile": "desktop",
@@ -91,7 +91,7 @@
         "bytes": 60274,
         "width": 1440,
         "height": 900,
-        "capturedAt": "2026-09-27T13:35:45.769Z"
+        "capturedAt": "2026-09-27T14:46:39.347Z"
       },
       {
         "profile": "full",
@@ -100,7 +100,7 @@
         "bytes": 53296,
         "width": 1440,
         "height": 900,
-        "capturedAt": "2026-09-27T13:35:49.268Z"
+        "capturedAt": "2026-09-27T14:46:43.096Z"
       },
       {
         "profile": "mobile",
@@ -109,7 +109,7 @@
         "bytes": 45345,
         "width": 430,
         "height": 932,
-        "capturedAt": "2026-09-27T13:35:47.521Z"
+        "capturedAt": "2026-09-27T14:46:41.216Z"
       },
       {
         "profile": "og",
@@ -118,7 +118,7 @@
         "bytes": 58856,
         "width": 1200,
         "height": 630,
-        "capturedAt": "2026-09-27T13:35:50.994Z"
+        "capturedAt": "2026-09-27T14:46:44.855Z"
       }
     ],
     "trailers": [
@@ -166,7 +166,7 @@
   "metrics": {
     "sourceFiles": 35,
     "testFiles": 3,
-    "sourceLines": 4350,
+    "sourceLines": 4355,
     "largestDirectories": [
       {
         "directory": "src",
@@ -197,10 +197,10 @@
   "analysisNotes": "React/Redux configuration UI with mock flows; build fallback is reliable while its old CRA dev server is less stable locally.",
   "git": {
     "branch": "master",
-    "head": "c10c5e4",
-    "lastCommitDate": "2026-09-27T16:32:31+03:00",
-    "lastCommitSubject": "A media strategy with tests: screenshots that show the app, a recorded trailer, a gated refresh",
-    "commitCount": 29,
+    "head": "207d135",
+    "lastCommitDate": "2026-09-27T17:33:48+03:00",
+    "lastCommitSubject": "Update the metadata toolkit scripts: trailers step, refresh --commit, capture.skip",
+    "commitCount": 31,
     "remote": "https://github.com/BorisThoris/flowforge-configurator"
   },
   "readme": {
