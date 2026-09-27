@@ -1,10 +1,26 @@
 {
   "slug": "flowforge-configurator",
-  "capturedAt": "2026-09-24T16:32:11.289Z",
+  "capturedAt": "2026-09-27T13:31:37.712Z",
   "source": "deployment",
   "url": "https://flowforge-configurator-git.pages.dev/",
   "recipe": {
-    "route": "/"
+    "route": "/",
+    "actions": [
+      {
+        "type": "click",
+        "target": {
+          "role": "button",
+          "name": "Edit tags"
+        },
+        "label": "open the tag editor",
+        "optional": true
+      },
+      {
+        "type": "wait",
+        "ms": 800
+      }
+    ],
+    "waitAfterReadyMs": 600
   },
   "profiles": [
     {
@@ -12,40 +28,75 @@
       "file": "card.jpg",
       "width": 1600,
       "height": 900,
-      "bytes": 59810,
-      "status": "captured"
+      "bytes": 60267,
+      "status": "captured",
+      "stats": {
+        "mean": 211,
+        "std": 26,
+        "dark": 0,
+        "light": 0.1,
+        "colours": 24
+      }
     },
     {
       "profile": "desktop",
       "file": "desktop.jpg",
       "width": 1440,
       "height": 900,
-      "bytes": 58620,
-      "status": "captured"
+      "bytes": 59632,
+      "status": "captured",
+      "stats": {
+        "mean": 211,
+        "std": 27,
+        "dark": 0,
+        "light": 0.098,
+        "colours": 30
+      }
     },
     {
       "profile": "mobile",
       "file": "mobile.jpg",
       "width": 430,
       "height": 932,
-      "bytes": 38905,
-      "status": "captured"
+      "bytes": 46335,
+      "status": "captured",
+      "stats": {
+        "mean": 198,
+        "std": 54,
+        "dark": 0,
+        "light": 0.136,
+        "colours": 48
+      }
     },
     {
       "profile": "full",
       "file": "full.jpg",
       "width": 1440,
       "height": 900,
-      "bytes": 51588,
-      "status": "captured"
+      "bytes": 53014,
+      "status": "captured",
+      "stats": {
+        "mean": 211,
+        "std": 27,
+        "dark": 0,
+        "light": 0.098,
+        "colours": 30
+      }
     },
     {
       "profile": "og",
       "file": "og.jpg",
       "width": 1200,
       "height": 630,
-      "bytes": 57291,
-      "status": "captured"
+      "bytes": 58139,
+      "status": "captured",
+      "stats": {
+        "mean": 208,
+        "std": 36,
+        "dark": 0,
+        "light": 0.124,
+        "colours": 30
+      }
     }
   ]
 }

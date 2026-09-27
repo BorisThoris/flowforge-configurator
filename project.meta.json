@@ -1,7 +1,7 @@
 {
   "$schema": "./scripts/project.meta.schema.json",
   "schemaVersion": 1,
-  "generatedAt": "2026-09-24T16:32:11.410Z",
+  "generatedAt": "2026-09-27T13:32:09.726Z",
   "generatedBy": "scripts/generate-project-meta.mjs",
   "identity": {
     "slug": "flowforge-configurator",
@@ -46,61 +46,94 @@
       "icons:check",
       "meta:refresh",
       "trailers",
-      "trailers:check"
+      "trailers:check",
+      "test:media",
+      "test:media:e2e"
     ]
   },
   "capture": {
-    "route": "/"
+    "route": "/",
+    "actions": [
+      {
+        "type": "click",
+        "target": {
+          "role": "button",
+          "name": "Edit tags"
+        },
+        "label": "open the tag editor",
+        "optional": true
+      },
+      {
+        "type": "wait",
+        "ms": 800
+      }
+    ],
+    "waitAfterReadyMs": 600
   },
   "media": {
     "source": "repo-local",
-    "directory": "/home/runner/work/flowforge-configurator/flowforge-configurator/project-media",
+    "directory": "C:/Users/GAMING~1/AppData/Local/Temp/media-rollout-PDQg0j/project-media",
     "primary": "project-media/card.jpg",
     "images": [
       {
         "profile": "card",
         "file": "card.jpg",
         "path": "project-media/card.jpg",
-        "bytes": 59810,
+        "bytes": 60267,
         "width": 1600,
         "height": 900,
-        "capturedAt": "2026-09-24T16:32:05.470Z"
+        "capturedAt": "2026-09-27T13:31:11.208Z"
       },
       {
         "profile": "desktop",
         "file": "desktop.jpg",
         "path": "project-media/desktop.jpg",
-        "bytes": 58620,
+        "bytes": 59632,
         "width": 1440,
         "height": 900,
-        "capturedAt": "2026-09-24T16:32:06.917Z"
+        "capturedAt": "2026-09-27T13:31:14.538Z"
       },
       {
         "profile": "full",
         "file": "full.jpg",
         "path": "project-media/full.jpg",
-        "bytes": 51588,
+        "bytes": 53014,
         "width": 1440,
         "height": 900,
-        "capturedAt": "2026-09-24T16:32:09.833Z"
+        "capturedAt": "2026-09-27T13:31:23.207Z"
       },
       {
         "profile": "mobile",
         "file": "mobile.jpg",
         "path": "project-media/mobile.jpg",
-        "bytes": 38905,
+        "bytes": 46335,
         "width": 430,
         "height": 932,
-        "capturedAt": "2026-09-24T16:32:08.371Z"
+        "capturedAt": "2026-09-27T13:31:17.913Z"
       },
       {
         "profile": "og",
         "file": "og.jpg",
         "path": "project-media/og.jpg",
-        "bytes": 57291,
+        "bytes": 58139,
         "width": 1200,
         "height": 630,
-        "capturedAt": "2026-09-24T16:32:11.260Z"
+        "capturedAt": "2026-09-27T13:31:29.027Z"
+      }
+    ],
+    "trailers": [
+      {
+        "id": "tour",
+        "title": "Flowforge Configurator: a pipeline, saved",
+        "url": "https://flowforge-configurator-git.pages.dev/trailers/tour.mp4",
+        "poster": "https://flowforge-configurator-git.pages.dev/trailers/tour.jpg",
+        "file": "public/trailers/tour.mp4",
+        "bytes": 592708,
+        "width": 1280,
+        "height": 720,
+        "duration": 20,
+        "orientation": "landscape",
+        "builtAt": "2026-09-27T13:28:48.750Z"
       }
     ]
   },
@@ -131,9 +164,9 @@
     "devDependencyCount": 0
   },
   "metrics": {
-    "sourceFiles": 32,
-    "testFiles": 1,
-    "sourceLines": 3480,
+    "sourceFiles": 35,
+    "testFiles": 3,
+    "sourceLines": 4350,
     "largestDirectories": [
       {
         "directory": "src",
@@ -141,7 +174,7 @@
       },
       {
         "directory": "scripts",
-        "files": 7
+        "files": 10
       },
       {
         "directory": "public",
@@ -163,12 +196,12 @@
   },
   "analysisNotes": "React/Redux configuration UI with mock flows; build fallback is reliable while its old CRA dev server is less stable locally.",
   "git": {
-    "branch": "master",
-    "head": "434a2ac",
-    "lastCommitDate": "2026-09-24T19:16:54+03:00",
-    "lastCommitSubject": "Update the metadata toolkit scripts: trailers step, refresh --commit, capture.skip",
-    "commitCount": 27,
-    "remote": "https://github.com/BorisThoris/flowforge-configurator"
+    "branch": "HEAD",
+    "head": "711c8fe",
+    "lastCommitDate": "2026-09-24T16:32:11+00:00",
+    "lastCommitSubject": "Refresh screenshots, card, icons and metadata [meta-bot]",
+    "commitCount": 28,
+    "remote": "https://github.com/BorisThoris/flowforge-configurator.git"
   },
   "readme": {
     "file": "README.md",

@@ -1,22 +1,21 @@
 // Metadata inputs for this repository - unique to quick-base-task.
 //
-// Everything here is curated by hand. Derived facts (stack, metrics, git,
-// screenshots) are computed by scripts/generate-project-meta.mjs, which writes
-// project.meta.json. Run it with:
-//   npm run meta          regenerate project.meta.json
-//   npm run meta:check    fail if project.meta.json is stale
+// Everything here is curated by hand: identity, commands, the screenshot recipe
+// (capture), the recorded trailer (trailers.items, kind: capture) and where the
+// card, icons and trailers are published. scripts/generate-project-meta.mjs
+// derives the rest into project.meta.json; scripts/project-media.test.mjs
+// checks that everything here was actually produced.
+//   npm run meta:refresh   trailers -> shots -> social -> icons -> meta
+//   npm run test:media     the media contract
 
 import path from 'node:path';
 
-// Screenshots are captured by the portfolio (npm run capture there). Point
-// PORTFOLIO_ROOT elsewhere, or drop images in ./project-media, to override.
 const portfolioRoot = process.env.PORTFOLIO_ROOT ?? String.raw`C:\Users\Gaming PC\Desktop\Repos\portfolio`;
 
 export default {
-  slug: "flowforge-configurator",
-  classification: "web-app",
-
-  curated: {
+  "slug": "flowforge-configurator",
+  "classification": "web-app",
+  "curated": {
     "title": "Flowforge Configurator",
     "subtitle": "A pipeline configuration form with drafts and tags",
     "description": "A React and Redux configuration form for pipeline-style records: load channels, edit fields and tags with validation, keep a local draft between visits, switch languages, and save a transformed pipeline object through a mocked API.",
@@ -35,13 +34,26 @@ export default {
     "devPort": 4112,
     "showcaseTier": "more"
   },
-
-  // How the portfolio screenshot pipeline photographs this project.
-  capture: {
-    "route": "/"
+  "capture": {
+    "route": "/",
+    "actions": [
+      {
+        "type": "click",
+        "target": {
+          "role": "button",
+          "name": "Edit tags"
+        },
+        "label": "open the tag editor",
+        "optional": true
+      },
+      {
+        "type": "wait",
+        "ms": 800
+      }
+    ],
+    "waitAfterReadyMs": 600
   },
-
-  scores: {
+  "scores": {
     "priorityScore": 61,
     "demoabilityScore": 64,
     "depthScore": 62,
@@ -49,30 +61,137 @@ export default {
     "uniquenessScore": 60,
     "maintenanceScore": 56
   },
-
-  analysisNotes:
-    "React/Redux configuration UI with mock flows; build fallback is reliable while its old CRA dev server is less stable locally.",
-
-  // Where the link-preview card lives: the page head that carries the Open
-  // Graph tags, and the static directory the image is published from.
-  social: {
+  "analysisNotes": "React/Redux configuration UI with mock flows; build fallback is reliable while its old CRA dev server is less stable locally.",
+  "social": {
     "htmlFile": "public/index.html",
     "pageTitle": "Flowforge Configurator",
     "staticDir": "public",
     "imageName": "og-image.jpg",
     "imageUrlPath": "/og-image.jpg"
   },
-
-  // The icon set is rendered from favicon.svg by scripts/generate-app-icons.mjs.
-  icons: {
+  "icons": {
     "background": "#042f2e",
     "themeColor": "#042f2e",
     "shortName": "Flowforge"
   },
-
-  media: {
-    sourceDir: path.join(portfolioRoot, "public", "project-shots", "flowforge-configurator", "latest"),
-    publicPathPrefix: "/project-shots/flowforge-configurator/latest",
-    primaryProfile: "card"
+  "media": {
+    "sourceDir": path.join(portfolioRoot, "public", "project-shots", "flowforge-configurator", "latest"),
+    "publicPathPrefix": "/project-shots/flowforge-configurator/latest",
+    "primaryProfile": "card"
+  },
+  "trailers": {
+    "items": [
+      {
+        "id": "tour",
+        "title": "Flowforge Configurator: a pipeline, saved",
+        "kind": "capture",
+        "inputs": [
+          "src",
+          "public/index.html"
+        ],
+        "source": "deployment",
+        "music": "project-media/music/tour.m4a",
+        "posterAt": 0.5,
+        "recipe": {
+          "route": "/",
+          "viewport": {
+            "width": 1280,
+            "height": 720
+          },
+          "durationMs": 20000,
+          "setup": {
+            "actions": [
+              {
+                "type": "waitFor",
+                "target": {
+                  "role": "button",
+                  "name": "Save pipeline"
+                },
+                "state": "visible",
+                "label": "wait for the form"
+              }
+            ],
+            "waitAfterReadyMs": 1200
+          },
+          "timeline": [
+            {
+              "type": "fill",
+              "target": {
+                "selector": "input[type=text]"
+              },
+              "value": "",
+              "label": "clear the label",
+              "optional": true
+            },
+            {
+              "type": "type",
+              "target": {
+                "selector": "input[type=text]"
+              },
+              "value": "Nightly export",
+              "eachMs": 90,
+              "label": "name the pipeline",
+              "optional": true
+            },
+            {
+              "type": "wait",
+              "ms": 1200
+            },
+            {
+              "type": "click",
+              "target": {
+                "role": "button",
+                "name": "Edit tags"
+              },
+              "label": "edit tags",
+              "optional": true
+            },
+            {
+              "type": "wait",
+              "ms": 2500
+            },
+            {
+              "type": "click",
+              "target": {
+                "role": "button",
+                "name": "Switch language"
+              },
+              "label": "switch language",
+              "optional": true
+            },
+            {
+              "type": "wait",
+              "ms": 2500
+            },
+            {
+              "type": "click",
+              "target": {
+                "role": "button",
+                "name": "Switch language"
+              },
+              "label": "switch back",
+              "optional": true
+            },
+            {
+              "type": "wait",
+              "ms": 1500
+            },
+            {
+              "type": "click",
+              "target": {
+                "role": "button",
+                "name": "Save pipeline"
+              },
+              "label": "save",
+              "optional": true
+            },
+            {
+              "type": "wait",
+              "ms": 3000
+            }
+          ]
+        }
+      }
+    ]
   }
 };

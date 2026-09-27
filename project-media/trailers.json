@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "items": [
+    {
+      "id": "tour",
+      "title": "Flowforge Configurator: a pipeline, saved",
+      "kind": "capture",
+      "inputsHash": "1ac91c48fcd4f0a6801b1b8126dabceed7eef6be41f9440249d2c833dd95b4b0",
+      "builtAt": "2026-09-27T13:28:48.750Z",
+      "source": "project-media/.captures/tour.webm",
+      "file": "public/trailers/tour.mp4",
+      "poster": "public/trailers/tour.jpg",
+      "urlPath": "/trailers/tour.mp4",
+      "posterUrlPath": "/trailers/tour.jpg",
+      "bytes": 592708,
+      "width": 1280,
+      "height": 720,
+      "duration": 20,
+      "fps": 30,
+      "orientation": "landscape",
+      "music": "project-media/music/tour.m4a",
+      "stats": {
+        "mean": 209,
+        "std": 33,
+        "dark": 0,
+        "light": 0.113,
+        "colours": 27
+      }
+    }
+  ]
+}
