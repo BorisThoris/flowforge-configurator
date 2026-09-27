@@ -1,7 +1,7 @@
 {
   "$schema": "./scripts/project.meta.schema.json",
   "schemaVersion": 1,
-  "generatedAt": "2026-09-27T13:32:09.726Z",
+  "generatedAt": "2026-09-27T13:35:51.155Z",
   "generatedBy": "scripts/generate-project-meta.mjs",
   "identity": {
     "slug": "flowforge-configurator",
@@ -72,53 +72,53 @@
   },
   "media": {
     "source": "repo-local",
-    "directory": "C:/Users/GAMING~1/AppData/Local/Temp/media-rollout-PDQg0j/project-media",
+    "directory": "/home/runner/work/flowforge-configurator/flowforge-configurator/project-media",
     "primary": "project-media/card.jpg",
     "images": [
       {
         "profile": "card",
         "file": "card.jpg",
         "path": "project-media/card.jpg",
-        "bytes": 60267,
+        "bytes": 60505,
         "width": 1600,
         "height": 900,
-        "capturedAt": "2026-09-27T13:31:11.208Z"
+        "capturedAt": "2026-09-27T13:35:43.972Z"
       },
       {
         "profile": "desktop",
         "file": "desktop.jpg",
         "path": "project-media/desktop.jpg",
-        "bytes": 59632,
+        "bytes": 60274,
         "width": 1440,
         "height": 900,
-        "capturedAt": "2026-09-27T13:31:14.538Z"
+        "capturedAt": "2026-09-27T13:35:45.769Z"
       },
       {
         "profile": "full",
         "file": "full.jpg",
         "path": "project-media/full.jpg",
-        "bytes": 53014,
+        "bytes": 53296,
         "width": 1440,
         "height": 900,
-        "capturedAt": "2026-09-27T13:31:23.207Z"
+        "capturedAt": "2026-09-27T13:35:49.268Z"
       },
       {
         "profile": "mobile",
         "file": "mobile.jpg",
         "path": "project-media/mobile.jpg",
-        "bytes": 46335,
+        "bytes": 45345,
         "width": 430,
         "height": 932,
-        "capturedAt": "2026-09-27T13:31:17.913Z"
+        "capturedAt": "2026-09-27T13:35:47.521Z"
       },
       {
         "profile": "og",
         "file": "og.jpg",
         "path": "project-media/og.jpg",
-        "bytes": 58139,
+        "bytes": 58856,
         "width": 1200,
         "height": 630,
-        "capturedAt": "2026-09-27T13:31:29.027Z"
+        "capturedAt": "2026-09-27T13:35:50.994Z"
       }
     ],
     "trailers": [
@@ -196,12 +196,12 @@
   },
   "analysisNotes": "React/Redux configuration UI with mock flows; build fallback is reliable while its old CRA dev server is less stable locally.",
   "git": {
-    "branch": "HEAD",
-    "head": "711c8fe",
-    "lastCommitDate": "2026-09-24T16:32:11+00:00",
-    "lastCommitSubject": "Refresh screenshots, card, icons and metadata [meta-bot]",
-    "commitCount": 28,
-    "remote": "https://github.com/BorisThoris/flowforge-configurator.git"
+    "branch": "master",
+    "head": "c10c5e4",
+    "lastCommitDate": "2026-09-27T16:32:31+03:00",
+    "lastCommitSubject": "A media strategy with tests: screenshots that show the app, a recorded trailer, a gated refresh",
+    "commitCount": 29,
+    "remote": "https://github.com/BorisThoris/flowforge-configurator"
   },
   "readme": {
     "file": "README.md",
