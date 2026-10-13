@@ -1,7 +1,7 @@
 {
   "$schema": "./scripts/project.meta.schema.json",
   "schemaVersion": 1,
-  "generatedAt": "2026-09-27T14:46:45.022Z",
+  "generatedAt": "2026-10-13T01:08:34.525Z",
   "generatedBy": "scripts/generate-project-meta.mjs",
   "identity": {
     "slug": "flowforge-configurator",
@@ -72,53 +72,53 @@
   },
   "media": {
     "source": "repo-local",
-    "directory": "/home/runner/work/flowforge-configurator/flowforge-configurator/project-media",
+    "directory": "/root/gha/runners/flowforge-configurator/_work/flowforge-configurator/flowforge-configurator/project-media",
     "primary": "project-media/card.jpg",
     "images": [
       {
         "profile": "card",
         "file": "card.jpg",
         "path": "project-media/card.jpg",
-        "bytes": 60505,
+        "bytes": 59941,
         "width": 1600,
         "height": 900,
-        "capturedAt": "2026-09-27T14:46:37.464Z"
+        "capturedAt": "2026-10-13T01:08:13.528Z"
       },
       {
         "profile": "desktop",
         "file": "desktop.jpg",
         "path": "project-media/desktop.jpg",
-        "bytes": 60274,
+        "bytes": 59712,
         "width": 1440,
         "height": 900,
-        "capturedAt": "2026-09-27T14:46:39.347Z"
+        "capturedAt": "2026-10-13T01:08:18.456Z"
       },
       {
         "profile": "full",
         "file": "full.jpg",
         "path": "project-media/full.jpg",
-        "bytes": 53296,
+        "bytes": 53157,
         "width": 1440,
         "height": 900,
-        "capturedAt": "2026-09-27T14:46:43.096Z"
+        "capturedAt": "2026-10-13T01:08:28.164Z"
       },
       {
         "profile": "mobile",
         "file": "mobile.jpg",
         "path": "project-media/mobile.jpg",
-        "bytes": 45345,
+        "bytes": 44669,
         "width": 430,
         "height": 932,
-        "capturedAt": "2026-09-27T14:46:41.216Z"
+        "capturedAt": "2026-10-13T01:08:23.272Z"
       },
       {
         "profile": "og",
         "file": "og.jpg",
         "path": "project-media/og.jpg",
-        "bytes": 58856,
+        "bytes": 56997,
         "width": 1200,
         "height": 630,
-        "capturedAt": "2026-09-27T14:46:44.855Z"
+        "capturedAt": "2026-10-13T01:08:32.800Z"
       }
     ],
     "trailers": [
@@ -197,10 +197,10 @@
   "analysisNotes": "React/Redux configuration UI with mock flows; build fallback is reliable while its old CRA dev server is less stable locally.",
   "git": {
     "branch": "master",
-    "head": "207d135",
-    "lastCommitDate": "2026-09-27T17:33:48+03:00",
-    "lastCommitSubject": "Update the metadata toolkit scripts: trailers step, refresh --commit, capture.skip",
-    "commitCount": 31,
+    "head": "6088b64",
+    "lastCommitDate": "2026-10-13T01:43:35+03:00",
+    "lastCommitSubject": "Hosted jobs move to the owner's own runners",
+    "commitCount": 33,
     "remote": "https://github.com/BorisThoris/flowforge-configurator"
   },
   "readme": {
