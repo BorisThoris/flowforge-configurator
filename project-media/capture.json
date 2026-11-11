@@ -1,6 +1,6 @@
 {
   "slug": "flowforge-configurator",
-  "capturedAt": "2026-11-11T21:18:31.729Z",
+  "capturedAt": "2026-11-11T23:50:41.483Z",
   "source": "deployment",
   "url": "https://flowforge-configurator-git.pages.dev/",
   "recipe": {
@@ -28,13 +28,13 @@
       "file": "card.jpg",
       "width": 1600,
       "height": 900,
-      "bytes": 60267,
+      "bytes": 59941,
       "status": "captured",
       "stats": {
         "mean": 211,
         "std": 26,
         "dark": 0,
-        "light": 0.1,
+        "light": 0.098,
         "colours": 24
       }
     },
@@ -43,14 +43,14 @@
       "file": "desktop.jpg",
       "width": 1440,
       "height": 900,
-      "bytes": 59632,
+      "bytes": 59712,
       "status": "captured",
       "stats": {
         "mean": 211,
         "std": 27,
         "dark": 0,
-        "light": 0.098,
-        "colours": 30
+        "light": 0.102,
+        "colours": 27
       }
     },
     {
@@ -58,14 +58,14 @@
       "file": "mobile.jpg",
       "width": 430,
       "height": 932,
-      "bytes": 46335,
+      "bytes": 44669,
       "status": "captured",
       "stats": {
         "mean": 198,
         "std": 54,
         "dark": 0,
-        "light": 0.136,
-        "colours": 48
+        "light": 0.137,
+        "colours": 42
       }
     },
     {
@@ -73,14 +73,14 @@
       "file": "full.jpg",
       "width": 1440,
       "height": 900,
-      "bytes": 53014,
+      "bytes": 53157,
       "status": "captured",
       "stats": {
         "mean": 211,
         "std": 27,
         "dark": 0,
-        "light": 0.098,
-        "colours": 30
+        "light": 0.102,
+        "colours": 27
       }
     },
     {
@@ -88,14 +88,14 @@
       "file": "og.jpg",
       "width": 1200,
       "height": 630,
-      "bytes": 58139,
+      "bytes": 56997,
       "status": "captured",
       "stats": {
         "mean": 208,
         "std": 36,
         "dark": 0,
-        "light": 0.124,
-        "colours": 30
+        "light": 0.122,
+        "colours": 28
       }
     }
   ]

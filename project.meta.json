@@ -82,7 +82,7 @@
         "bytes": 59941,
         "width": 1600,
         "height": 900,
-        "capturedAt": "2026-10-13T01:08:13.528Z"
+        "capturedAt": "2026-11-11T23:50:21.211Z"
       },
       {
         "profile": "desktop",
@@ -91,7 +91,7 @@
         "bytes": 59712,
         "width": 1440,
         "height": 900,
-        "capturedAt": "2026-10-13T01:08:18.456Z"
+        "capturedAt": "2026-11-11T23:50:25.867Z"
       },
       {
         "profile": "full",
@@ -100,7 +100,7 @@
         "bytes": 53157,
         "width": 1440,
         "height": 900,
-        "capturedAt": "2026-10-13T01:08:28.164Z"
+        "capturedAt": "2026-11-11T23:50:36.243Z"
       },
       {
         "profile": "mobile",
@@ -109,7 +109,7 @@
         "bytes": 44669,
         "width": 430,
         "height": 932,
-        "capturedAt": "2026-10-13T01:08:23.272Z"
+        "capturedAt": "2026-11-11T23:50:31.383Z"
       },
       {
         "profile": "og",
@@ -118,7 +118,7 @@
         "bytes": 56997,
         "width": 1200,
         "height": 630,
-        "capturedAt": "2026-10-13T01:08:32.800Z"
+        "capturedAt": "2026-11-11T23:50:40.915Z"
       }
     ],
     "trailers": [
@@ -197,10 +197,10 @@
   "analysisNotes": "React/Redux configuration UI with mock flows; build fallback is reliable while its old CRA dev server is less stable locally.",
   "git": {
     "branch": "master",
-    "head": "6088b64",
-    "lastCommitDate": "2026-10-13T01:43:35+03:00",
-    "lastCommitSubject": "Hosted jobs move to the owner's own runners",
-    "commitCount": 33,
+    "head": "7126e9f",
+    "lastCommitDate": "2026-11-12T01:35:38+02:00",
+    "lastCommitSubject": "Republish the link-preview card from the new screenshots",
+    "commitCount": 36,
     "remote": "https://github.com/BorisThoris/flowforge-configurator"
   },
   "readme": {
